@@ -1,5 +1,7 @@
 package com.javacodegeeks.ultimate;
 
+import com.javacodegeeks.ultimate.Entity.Person;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
