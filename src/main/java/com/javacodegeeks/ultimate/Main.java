@@ -62,7 +62,6 @@ public class Main {
     private void persistGeek(EntityManager entityManager) {
         EntityTransaction transaction = entityManager.getTransaction();
 
-        try {
             transaction.begin();
             Geek geek = new Geek();
             geek.setFirstName("Gavin");
@@ -80,10 +79,6 @@ public class Main {
             geek.setFavouriteProgrammingLanguage("Java");
             entityManager.persist(geek);
             transaction.commit();
-        } catch (Exception e) {
-            if(transaction.isActive()) {
-                transaction.rollback();
-            }
-        }
+
     }
 }
